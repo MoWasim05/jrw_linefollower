@@ -38,12 +38,12 @@ float centerPosition = 20;
 float error;
 float derivative;
 float previousError;
-int baseSpeed = 150;
-float kp = 15;
-float kd = 5;
+int baseSpeed = 150; //max is 1000+ but 150 is already quite fast 
+float kp = 15; // tuning requires starting with kd at 0 and adjusting kp until it runs and turns effectively.
+float kd = 5; // after kp is set, kd is used to smoothen tracking
 
 // motor speed parity
-int adjustSpeed = 10;
+int adjustSpeed = 10; // should be about right (left motor is currently faster)
 
 void setup() {
   // control initialization
